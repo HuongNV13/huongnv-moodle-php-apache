@@ -80,12 +80,12 @@ echo 'apc.enable_cli = On' >> /usr/local/etc/php/conf.d/docker-php-ext-apcu.ini
 # References:
 #   - https://github.com/moodlehq/moodle-php-apache/issues/16 (part of the php72 image discussion)
 #   - https://github.com/moodlehq/moodle-php-apache/issues/19 (awaiting for a better solution)
-/tmp/setup/solr-extension.sh
+/ext/solr-extension.sh
 
 # Install Microsoft dependencies for sqlsrv.
 # (kept apart for clarity, still need to be run here
 # before some build packages are deleted)
-/tmp/setup/sqlsrv-extension.sh
+/ext/sqlsrv-extension.sh
 
 # Keep our image size down..
 pecl clear-cache
