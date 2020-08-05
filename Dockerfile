@@ -5,7 +5,7 @@ ADD ext/ /ext
 RUN chmod 777 /tmp && chmod +t /tmp
 
 # Install some packages that are useful within the images.
-RUN apt-get update && apt-get install -y git && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y git texinfo && rm -rf /var/lib/apt/lists/*
 
 # Setup the required extensions.
 ARG DEBIAN_FRONTEND=noninteractive

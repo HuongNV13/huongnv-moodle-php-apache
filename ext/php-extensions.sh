@@ -90,6 +90,9 @@ echo 'apc.enable_cli = On' >> /usr/local/etc/php/conf.d/docker-php-ext-apcu.ini
 # before some build packages are deleted)
 /ext/sqlsrv-extension.sh
 
+# Install Maxima.
+/ext/maxima-extensions.sh
+
 # Keep our image size down..
 pecl clear-cache
 apt-get remove --purge -y $BUILD_PACKAGES
