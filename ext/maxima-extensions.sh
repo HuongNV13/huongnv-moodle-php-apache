@@ -11,9 +11,9 @@ cd sbcl-1.3.1/
 ./install.sh
 
 cd /tmp
-wget http://kent.dl.sourceforge.net/project/maxima/Maxima-source/5.36.1-source/maxima-5.36.1.tar.gz
-tar -zxf maxima-5.36.1.tar.gz
-cd maxima-5.36.1/
+wget http://kent.dl.sourceforge.net/project/maxima/Maxima-source/5.42.2-source/maxima-5.42.2.tar.gz
+tar -zxf maxima-5.42.2.tar.gz
+cd maxima-5.42.2/
 
 ./configure  --with-sbcl
 make
