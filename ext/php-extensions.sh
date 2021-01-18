@@ -66,6 +66,10 @@ docker-php-ext-enable memcached mongodb redis apcu igbinary uuid
 docker-php-ext-configure zip --with-libzip
 docker-php-ext-install zip
 
+# MBSTRING
+docker-php-ext-install mbstring
+docker-php-ext-enable mbstring
+
 # EXIF
 docker-php-ext-install exif
 docker-php-ext-enable exif
@@ -89,9 +93,6 @@ echo 'apc.enable_cli = On' >> /usr/local/etc/php/conf.d/docker-php-ext-apcu.ini
 # (kept apart for clarity, still need to be run here
 # before some build packages are deleted)
 /ext/sqlsrv-extension.sh
-
-# Install Maxima.
-/ext/maxima-extensions.sh
 
 # Keep our image size down..
 pecl clear-cache
