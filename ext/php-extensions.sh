@@ -7,7 +7,7 @@ echo "Installing apt dependencies"
 # Build packages will be added during the build, but will be removed at the end.
 BUILD_PACKAGES="gettext gnupg libcurl4-openssl-dev libfreetype6-dev libicu-dev libjpeg62-turbo-dev \
   libldap2-dev libmariadbclient-dev libmemcached-dev libpng-dev libpq-dev libxml2-dev libxslt-dev \
-  unixodbc-dev uuid-dev"
+  unixodbc-dev uuid-dev libmagickwand-dev"
 
 # Packages for Postgres.
 PACKAGES_POSTGRES="libpq5"
@@ -73,6 +73,10 @@ docker-php-ext-enable mbstring
 # EXIF
 docker-php-ext-install exif
 docker-php-ext-enable exif
+
+# Magisk
+pecl install imagick
+docker-php-ext-enable imagick
 
 echo 'apc.enable_cli = On' >> /usr/local/etc/php/conf.d/docker-php-ext-apcu.ini
 
